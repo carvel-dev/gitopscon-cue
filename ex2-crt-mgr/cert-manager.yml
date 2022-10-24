@@ -1,0 +1,18 @@
+apiVersion: kappctrl.k14s.io/v1alpha1
+kind: App
+metadata:
+  name: cert-manager
+  namespace: default
+spec:
+  serviceAccountName: cert-manager-sa
+  fetch:
+  - git:
+      url: https://github.com/uhthomas/automata
+      ref: 34fe331bfe2145c82956b9f71f86bc5b86104419
+  template:
+  - cue:
+      paths:
+      - github.com/uhthomas/automata/k8s/pillowtalk/cert_manager
+      outputExpression: "list"
+  deploy:
+  - kapp: {}
