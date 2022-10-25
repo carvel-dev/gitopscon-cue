@@ -1,7 +1,7 @@
 apiVersion: kappctrl.k14s.io/v1alpha1
 kind: App
 metadata:
-  name: cue-app
+  name: cue-inline
   namespace: default
 spec:
   serviceAccountName: default-ns-sa
@@ -45,7 +45,6 @@ spec:
             }
 
             deployment: {
-
                 apiVersion: "apps/v1"
                 kind:       "Deployment"
                 metadata: {
@@ -85,4 +84,4 @@ metadata:
   name: cue-values
 data:
   values.yml: |
-    helloMsg: "from cue"
+    helloMsg: "from cue 3"

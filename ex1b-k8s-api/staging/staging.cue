@@ -1,10 +1,17 @@
 package app
 
-deployment: spec: template: spec: containers: [...{
+deployment: spec: template: spec: containers: [{
     env: [{
-        name: name
-        if name == "HELLO_MSG" {
-        	value: "hi-staging"
-        }
+        name:  "HELLO_MSG"
+        value: "hi-staging"
     }]
 }]
+
+// Adding additional env variable?
+// deployment: spec: template: spec: containers: [{
+//     env: env
+//     env: env + [{
+//         name: "NEW_ONE"
+//         value: "hi-staging"
+//     }, ...]
+// }]

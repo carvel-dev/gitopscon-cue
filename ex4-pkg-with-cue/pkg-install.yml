@@ -1,0 +1,22 @@
+---
+apiVersion: packaging.carvel.dev/v1alpha1
+kind: PackageInstall
+metadata:
+  name: pkg-cue-demo
+spec:
+  serviceAccountName: cert-manager-sa
+  packageRef:
+    refName: pkg-cue.test.carvel.dev
+    versionSelection:
+      constraints: 2.0.0
+#   values:
+#   - secretRef:
+#       name: pkg-cue-demo-values
+# ---
+# apiVersion: v1
+# kind: Secret
+# metadata:
+#   name: pkg-cue-demo-values
+# stringData:
+#   values.yml: |
+#     hello_msg: "hi"

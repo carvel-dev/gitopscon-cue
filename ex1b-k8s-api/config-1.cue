@@ -8,7 +8,7 @@ deployment: appsv1.#Deployment & {
     apiVersion: "apps/v1"
     kind:       "Deployment"
     metadata: {
-        namespace: "default"
+        // namespace: "default"
         name:      "simple-app"
     }
     spec: {
@@ -24,7 +24,7 @@ deployment: appsv1.#Deployment & {
                     env: [{
                         name:  "HELLO_MSG"
                         value: string | *"hi!"
-                    }]
+                    }, ...]
                 }]
             }
         }

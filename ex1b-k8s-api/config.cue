@@ -8,7 +8,7 @@ service: corev1.#Service & {
     apiVersion: "v1"
     kind:       "Service"
     metadata: {
-        namespace: "default"
+        // namespace: "default"
         name:      "simple-app"
     }
     spec: {
